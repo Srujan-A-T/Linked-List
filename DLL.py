@@ -23,15 +23,24 @@ def printf(head):
     while curr:
         nodes.append(str(curr.data))
         curr=curr.next
-
     print("<->".join(nodes))
-        
 
-    
+def deletionDLL(head):
+    if head is None:
+        return head
+
+    curr = head
+    curr=curr.next
+    curr.prev=None
+    head = curr
+
+    return head
 
 myarr=[1,2,3,4]
 head=convertArr2DLL(myarr)
 printf(head)
 
+deletion=deletionDLL(head)
+printf(deletion)
 
         
