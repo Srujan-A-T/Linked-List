@@ -67,11 +67,26 @@ def deletionKthDLL(head,k):
 
     return head
 
+def deletionValDLL(head,val):
+    if head is None:
+        return head
 
+    curr=head
+    if head.data==val:
+        head=curr.next
+        curr=None
+        return head
+
+    while(curr.data!=val):
+        curr=curr.next
+
+    curr.prev.next=curr.next
+
+    return head
+    
 
 myarr=[1,2,3,4]
 head=convertArr2DLL(myarr)
 printf(head)
-
 
 
