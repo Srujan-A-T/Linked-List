@@ -25,7 +25,7 @@ def printf(head):
         curr=curr.next
     print("<->".join(nodes))
 
-def deletionDLL(head):
+def deletionheadDLL(head):
     if head is None:
         return head
 
@@ -36,11 +36,18 @@ def deletionDLL(head):
 
     return head
 
+def deletiontailDLL(head):
+    if head is None:
+        return head
+
+    curr = head 
+    while curr.next.next is not None:
+        curr = curr.next
+
+    curr.next=None
+
+    return head 
 myarr=[1,2,3,4]
 head=convertArr2DLL(myarr)
 printf(head)
 
-deletion=deletionDLL(head)
-printf(deletion)
-
-        
