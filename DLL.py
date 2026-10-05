@@ -43,11 +43,35 @@ def deletiontailDLL(head):
     curr = head 
     while curr.next.next is not None:
         curr = curr.next
-
     curr.next=None
 
     return head 
+
+def deletionKthDLL(head,k):
+    if head is None:
+        return head
+
+    curr=head
+    count=k
+
+    if k==1:
+        head=curr.next
+        curr=None
+        return head
+    
+    while(count!=1):
+        curr=curr.next
+        count-=1
+
+    curr.prev.next=curr.next
+
+    return head
+
+
+
 myarr=[1,2,3,4]
 head=convertArr2DLL(myarr)
 printf(head)
+
+
 
