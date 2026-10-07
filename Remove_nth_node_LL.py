@@ -44,4 +44,4 @@ head.next.next.next.next.next=Node(6)
 
 
 
-travesalSLL(removenthNode(head,6))
+travesalSLL(removenthNode(head,5))
