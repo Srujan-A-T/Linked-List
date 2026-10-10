@@ -62,3 +62,5 @@ head2.next.next.next=Node(7)
 new=intersectoptimal(head1,head2)
 
 print(new.data)
+
+
